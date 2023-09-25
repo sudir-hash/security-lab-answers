@@ -37,7 +37,28 @@ public class TransCipher {
                 enc+=(trans[i][j]);
             }
         }
+
+
         // display
         System.out.println(enc);
+
+        String dec="";
+        char ch1[][] = new char[row][col];
+        int k=0;
+        for(int i=0;i<col;i++){
+            for(int j=0;j<row;j++){
+                ch1[j][i]=enc.charAt(k++);
+            }
+        }
+        for (char[] cs : ch1) {
+            System.out.println(Arrays.toString(cs));
+        }
+        for(int i=0;i<row;i++){
+            for(int j=0;j<col;j++){
+                dec+=ch1[i][j];
+            }
+        }
+        System.out.println(dec);
+       
     }
 }

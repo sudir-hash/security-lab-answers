@@ -13,16 +13,16 @@
         <table>
             <tr>
                 <td>Enter First Prime Number:</td>
-                <td><input type="number" value="53" id="p"></td>
+                <td><input type="number" value="3" id="p"></td>
             </tr>
             <tr>
                 <td>Enter Second Prime Number:</td>
-                <td><input type="number" value="59" id="q"></p>
+                <td><input type="number" value="7" id="q"></p>
                 </td>
             </tr>
             <tr>
                 <td>Enter the Message(cipher text):<br>[A=1, B=2,...]</td>
-                <td><input type="number" value="89" id="msg"></p>
+                <td><input type="number" value="12" id="msg"></p>
                 </td>
             </tr>
             <tr>
@@ -47,6 +47,12 @@
                 <td>Cipher Text:</td>
                 <td>
                     <p id="ciphertext"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>DeCipher Text:</td>
+                <td>
+                    <p id="deciphertext"></p>
                 </td>
             </tr>
             <tr>
@@ -87,6 +93,7 @@
         document.getElementById('exponent').innerHTML = e;
         document.getElementById('privatekey').innerHTML = d;
         document.getElementById('ciphertext').innerHTML = ct;
+        document.getElementById('deciphertext').innerHTML = dt;
     }
 </script>
 
