@@ -3,12 +3,13 @@ public class DiffieHellman {
     public static void main(String args[]) {
         int p = 23;
         /* publicly known (prime number) */ int g = 5;
-        /* publicly known (primitive root) */ int x = 4; 
+        /* publicly known (primitive root) */ int x = 4;
         /*
-                                                          * only Alice knows this secret
-                                                          */
+         * only Alice knows this secret
+         */
         int y = 3;
-        /* only Bob knows this secret */ double aliceSends = (Math.pow(g, x)) % p;
+        /* only Bob knows this secret */ 
+        double aliceSends = (Math.pow(g, x)) % p;
         double bobComputes = (Math.pow(aliceSends, y)) % p;
         double bobSends = (Math.pow(g, y)) % p;
         double aliceComputes = (Math.pow(bobSends, x)) % p;

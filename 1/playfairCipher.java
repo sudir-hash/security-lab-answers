@@ -1,6 +1,6 @@
 import java.awt.Point;
 
-class playfairCipher {
+class PlayfairCipher {
     private static char[][] charTable;
     private static Point[] positions;
 

@@ -1,10 +1,16 @@
 class hillCipher {
     /* 3x3 key matrix for 3 characters at once */
-    public static int[][] keymat = new int[][] { { 1, 2, 1 }, { 2, 3, 2 },
-            { 2, 2, 1 } }; /* key inverse matrix */
-    public static int[][] invkeymat = new int[][] { { -1, 0, 1 }, { 2, -1, 0 }, { -2, 2, -1
-    } };
-    public static String key = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    public static int[][] keymat = new int[][] { 
+        { 1, 2, 1 },
+        { 2, 3, 2 },
+        { 2, 2, 1 }
+    }; /* key inverse matrix */
+    public static int[][] invkeymat = new int[][] {
+         { -1, 0, 1 }, 
+         { 2, -1, 0 }, 
+         { -2, 2, -1}
+    };
+    public static final String key = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     private static String encode(char a, char b, char c) {
         String ret = "";
@@ -43,17 +49,17 @@ class hillCipher {
     }
 
     public static void main(String[] args) throws java.lang.Exception {
-        String msg;
+        
         String enc = "";
         String dec = "";
         int n;
-        msg = ("SecurityLaboratory");
+        String msg = ("SecurityLaboratory");
         System.out.println("simulation of Hill Cipher\n ");
         System.out.println("Input message : " + msg);
-        msg = msg.toUpperCase();
-        msg = msg.replaceAll("\\s", "");
-        /* remove spaces */ n = msg.length() % 3;
-        /* append padding text X */ if (n != 0) {
+        msg = msg.toUpperCase().replaceAll("\\s","");
+        n = msg.length() % 3;
+        /* append padding text X */ 
+        if (n != 0) {
             for (int i = 1; i <= (3 - n); i++) {
                 msg += 'X';
             }

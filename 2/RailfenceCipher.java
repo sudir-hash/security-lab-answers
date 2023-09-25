@@ -61,7 +61,6 @@ public class RailfenceCipher {
         msg = "Anna University, Chennai";
         int depth = 2;
         enc = rf.encode(msg, depth);
-
         dec = rf.decode(enc, depth);
         System.out.println("Simulating Railfence Cipher\n ");
         System.out.println("Input Message : " + msg);
