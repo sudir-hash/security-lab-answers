@@ -1,4 +1,5 @@
-class caesarCipher {
+
+public class CaesarCipher {
     public static String encode(String enc, int offset) {
         offset = offset % 26 + 26;
         StringBuilder encoded = new StringBuilder();
@@ -25,8 +26,8 @@ class caesarCipher {
         System.out.println("Simulating Caesar Cipher\n ");
         System.out.println("Input : " + msg);
         System.out.printf("EncryptedMessage : ");
-        System.out.println(caesarCipher.encode(msg, 3));
+        System.out.println(encode(msg, 3));
         System.out.printf("Decrypted Message : ");
-        System.out.println(caesarCipher.decode(caesarCipher.encode(msg, 3), 3));
+        System.out.println(decode(encode(msg, 3), 3));
     }
 }
