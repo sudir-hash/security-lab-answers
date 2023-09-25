@@ -2,16 +2,15 @@ import java.util.*;
 
 public class TransCipher {
     public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
         System.out.println("Enter the plain text");
         String pl = "hello world";
-        sc.close();
-        String s = pl.replaceAll("\\s", "");
+        String s = pl.replaceAll("\\s", "");//replace all spaces
         int len= s.length();
         int c = 0;
         int col = 4;
-        int row = len+1 / col;
+        int row = (int) Math.ceil((double) len / col);
         System.out.println(len+" "+row);
+        //helloworld 
         char ch[][] = new char[row][col];
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {

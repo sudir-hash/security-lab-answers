@@ -57,7 +57,7 @@
 </body>
 <script type="text/javascript">
     function RSA() {
-        var gcd, p, q, no, n, t, e, i, x;
+        var gcd, p, q, no, n, t, e, i, x,d;
         
         gcd = function (a, b) { return (!b) ? a : gcd(b, a % b); }; 
         p  = document.getElementById('p').value;
@@ -65,19 +65,20 @@
         no = document.getElementById('msg').value; 
         n = p * q;
         t = (p - 1) * (q - 1);
+        //phi(n)
+
         for (e = 2; e < t; e++) {
             if(gcd(e, t) == 1) {
                 break;
             }
         }
-        for (i = 0; i < 10; i++) {
-            x = 1
-            + i * t
-            if (x % e == 0) {
-                d =
-                x / e; break;
+       for ( x = 1; x < t;x++){
+            if ((e * x) % t == 1) {
+                d = x;
+                break;
             }
-        }
+       }
+
         ctt = Math.pow(no, e).toFixed(0); 
         ct  = ctt % n;
         dtt = Math.pow(ct, d).toFixed(0); 

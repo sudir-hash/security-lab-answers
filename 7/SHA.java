@@ -5,26 +5,15 @@ public class SHA {
         try {
             MessageDigest md = MessageDigest.getInstance("SHA1");
             System.out.println("Message digest objectinfo:\n ");
-            System.out.println("Algorithm=" + md.getAlgorithm());
-            System.out.println("Provider=" + md.getProvider());
-            System.out.println("ToString=" + md.toString());
-            String input = "";
+            String input = "abc";
             md.update(input.getBytes());
-            byte[] output = md.digest();
-            System.out.println();
-            System.out.println("SHA1(\"" + input + "\")=" + bytesToHex(output));
-            input = "abc";
+            String output1=bytesToHex(md.digest());
+            System.out.println("message after encryption " +output1);
+            input="abc";
             md.update(input.getBytes());
-            output = md.digest();
-            System.out.println();
-            System.out.println("SHA1(\"" + input + "\")=" + bytesToHex(output));
-            input = "abcdefghijklmnopqrstuvwxyz";
-            md.update(input.getBytes());
-
-            output = md.digest();
-            System.out.println();
-            System.out.println("SHA1(\"" + input + "\")=" + bytesToHex(output));
-            System.out.println();
+            String output2=bytesToHex(md.digest());
+            System.out.println("message after encryption " +output2);
+            System.out.println("Check "+output1.equals(output2));
         } catch (Exception e) {
             System.out.println("Exception:" + e);
         }

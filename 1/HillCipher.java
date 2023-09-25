@@ -48,7 +48,7 @@ class hillCipher {
         String enc = "";
         String dec = "";
         int n;
-        String msg = ("SecurityLaboratory");
+        String msg = "Security Laboratory";
         System.out.println("simulation of Hill Cipher\n ");
         System.out.println("Input message : " + msg);
         msg = msg.toUpperCase().replaceAll("\\s","");

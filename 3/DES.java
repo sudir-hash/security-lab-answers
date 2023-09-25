@@ -16,6 +16,9 @@ public class DES {
             Cipher desCipher = Cipher.getInstance("DES/ECB/PKCS5Padding");
             // ECB -  Electronic Code Block 
             // PKCS5Padding - padding scheme
+            /*
+             * 
+             */
             desCipher.init(Cipher.ENCRYPT_MODE, myDesKey);
             String text = "hello world";
             System.out.println("Message [ByteFormat] : " + text.getBytes());
