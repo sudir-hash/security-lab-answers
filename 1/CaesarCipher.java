@@ -1,7 +1,9 @@
 
 public class CaesarCipher {
+
+    // 'A'/'a' + (str[i] - 'a'/'A' + offset) % 26
     public static String encode(String enc, int offset) {
-        offset = offset % 26 + 26;
+        // offset = offset % 26 + 26;
         StringBuilder encoded = new StringBuilder();
         for (char i : enc.toCharArray()) {
             if (Character.isLetter(i)) {

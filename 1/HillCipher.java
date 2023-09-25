@@ -19,10 +19,8 @@ class hillCipher {
         int posb = (int) b - 65;
         int posc = (int) c - 65;
         x = posa * keymat[0][0] + posb * keymat[1][0] + posc * keymat[2][0];
-        y = posa *
-                keymat[0][1] + posb * keymat[1][1] + posc * keymat[2][1];
-        z = posa * keymat[0][2]
-                + posb * keymat[1][2] + posc * keymat[2][2];
+        y = posa *keymat[0][1] + posb * keymat[1][1] + posc * keymat[2][1];
+        z = posa * keymat[0][2]+ posb * keymat[1][2] + posc * keymat[2][2];
         a = key.charAt(x % 26);
         b = key.charAt(y % 26);
         c = key.charAt(z % 26);
@@ -38,18 +36,15 @@ class hillCipher {
         int posc = (int) c - 65;
         x = posa * invkeymat[0][0] + posb * invkeymat[1][0] + posc * invkeymat[2][0];
         y = posa * invkeymat[0][1] + posb * invkeymat[1][1] + posc * invkeymat[2][1];
-        z = posa * invkeymat[0][2] + posb * invkeymat[1][2] + posc *
-                invkeymat[2][2];
+        z = posa * invkeymat[0][2] + posb * invkeymat[1][2] + posc * invkeymat[2][2];
         a = key.charAt((x % 26 < 0) ? (26 + x % 26) : (x % 26));
         b = key.charAt((y % 26 < 0) ? (26 + y % 26) : (y % 26));
         c = key.charAt((z % 26 < 0) ? (26 + z % 26) : (z % 26));
-        ret = "" + a + b
-                + c;
+        ret = "" + a + b + c;
         return ret;
     }
 
     public static void main(String[] args) throws java.lang.Exception {
-        
         String enc = "";
         String dec = "";
         int n;
