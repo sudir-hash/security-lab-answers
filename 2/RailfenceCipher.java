@@ -6,7 +6,6 @@ class railfenceCipherHelper {
         int l = msg.length();
         int c = l / depth;
         int k = 0;
-        System.out.println("r=" + r + " c=" + c+" l="+l);
         char mat[][] = new char[r][c];
         String enc = "";
         for (int i = 0; i < c; i++) {
@@ -18,12 +17,6 @@ class railfenceCipherHelper {
                 //     mat[j][i] = 'X';
                 // }
             }
-        }
-        System.out.println("Matrix : ");
-        for (int i = 0; i < r; i++) {
-            for (int j = 0; j < c; j++)
-                System.out.print(mat[i][j] + " ");
-            System.out.println();
         }
         for (int i = 0; i < r; i++) {
             for (int j = 0; j < c; j++) {
